@@ -28,10 +28,18 @@ const Footer = () => {
             <li>Privacy and policy </li>
           </ul>
         </div>
-        <div className="footer-footer-content-right">
+        <div className="footer-content-right">
           <h2>GET IN TOUCH</h2>
+          <ul>
+            <li>+1-222-334-3343</li>
+            <li>contact@aksiyapatri.com</li>
+          </ul>
         </div>
       </div>
+      <hr />
+      <p className="footer-copyright">
+        Copyright 2024 ⓒ Aksiya Patri.com - All Right Reserved
+      </p>
     </div>
   );
 };
