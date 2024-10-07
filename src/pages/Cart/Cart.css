@@ -88,10 +88,23 @@
 }
 
 .cart-promocode-input button {
-  width: max(10vw, 15px);
+  width: max(10vw, 150px);
   padding: 12px 5px;
   background-color: black;
   border: none;
   color: white;
   border-radius: 4px;
+}
+
+@media (max-width: 750px) {
+  .cart-bottom {
+    flex-direction: column-reverse;
+  }
+
+  .cart-promocode {
+    justify-content: start;
+  }
+  .cart {
+    margin-top: 10px;
+  }
 }

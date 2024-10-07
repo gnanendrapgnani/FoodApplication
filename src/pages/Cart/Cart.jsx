@@ -3,7 +3,8 @@ import "./Cart.css";
 import { StoreContext } from "../../context/StoreContext";
 
 const Cart = () => {
-  const { cartItem, food_list, removeFromCart } = useContext(StoreContext);
+  const { cartItem, food_list, removeFromCart, getTotalCartAmount } =
+    useContext(StoreContext);
 
   return (
     <div className="cart">
@@ -22,7 +23,7 @@ const Cart = () => {
           if (cartItem[item._id] > 0) {
             return (
               <div>
-                <div className="cart-Items-title cart-items-item">
+                <div key={index} className="cart-Items-title cart-items-item">
                   <img src={item.image} />
                   <p>{item.name}</p>
                   <p>₹{item.price}</p>
@@ -44,17 +45,17 @@ const Cart = () => {
           <div>
             <div className="cart-total-detail">
               <p>Subtotal</p>
-              <p>{0}</p>
+              <p>₹{getTotalCartAmount()}</p>
             </div>
             <hr />
             <div className="cart-total-detail">
               <p>Delivery Fee</p>
-              <p>{2}</p>
+              <p>₹{99}</p>
             </div>
             <hr />
             <div className="cart-total-detail">
               <b>Total</b>
-              <b>{0}</b>
+              <b>₹{getTotalCartAmount() + 99}</b>
             </div>
           </div>
           <button>Proceed to checkout</button>
