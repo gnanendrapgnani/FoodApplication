@@ -20,6 +20,7 @@ connectDb();
 app.use("/api/food", foodRouter);
 app.use("/images", express.static("uploads"));
 app.use("/api/user", userRouter);
+app.use("/api/cart/", userRouter);
 
 app.get("/", (req, res) => {
   res.send("Hi backend/api is working");
