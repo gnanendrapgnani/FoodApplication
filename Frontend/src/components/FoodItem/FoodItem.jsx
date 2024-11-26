@@ -14,6 +14,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
           className="food-item-image"
           alt=""
         />
+
         {!cartItem[id] ? (
           <img
             className="add"
